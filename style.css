@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background: linear-gradient(135deg, #cce5ff, #e6f0ff);
+  color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.tela {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px;
+  background: #ffffffaa;
+  box-shadow: 0 0 20px rgba(0, 0, 50, 0.1);
+  max-width: 90%;
+  width: 400px;
+  min-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.13) 5px 5px;
+}
+
+.tela:hover {
+  animation: scale 1s forwards;
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1.1);
+  }
+}
+.ativa {
+  display: flex;
+  animation: aparecer 0.6s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+button {
+  margin-top: 30px;
+  background-color: #66b3ff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3399ff;
+}
+
+#botao-play {
+  font-size: 7rem;
+  font-family: "arial";
+  line-height: 1;
+  background: none;
+  border: none;
+  color: #0059b3;
+  cursor: pointer;
+}
+
+#botao-play span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  display: block;
+  margin-top: 10px;
+}
+
+.foto {
+  max-width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mensagem {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+audio {
+  margin: 20px 0;
+  width: 100%;
+}
+
+#contador {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Estilos para os elementos flutuantes */
+.floating-elements-container {
+  position: fixed; /* Fixa no viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Garante que não interfira com cliques */
+  overflow: hidden; /* Garante que não tenha barra de rolagem */
+  z-index: -1; /* Manda para o fundo, atrás do conteúdo principal */
+}
+
+.floating-item {
+  position: absolute;
+  font-size: 2em; /* Tamanho dos corações/girassóis */
+  opacity: 0; /* Começa invisível */
+  animation-name: float-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards; /* Mantém o estado final da animação */
+}
+
+/* Animação de flutuação */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) scale(0.5); /* Começa embaixo, pequeno */
+    opacity: 0;
+  }
+  20% {
+    opacity: 1; /* Torna visível ao subir */
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.5); /* Sobe e cresce, saindo da tela */
+    opacity: 0; /* Fica invisível ao sair */
+  }
+}
+
+/* Posicionamento e duração/atraso para cada item */
+.floating-item:nth-child(1) {
+  left: 10%;
+  animation-duration: 15s;
+  animation-delay: 0s;
+}
+
+.floating-item:nth-child(2) {
+  left: 30%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.floating-item:nth-child(3) {
+  left: 50%;
+  animation-duration: 18s;
+  animation-delay: 4s;
+}
+
+.floating-item:nth-child(4) {
+  left: 70%;
+  animation-duration: 14s;
+  animation-delay: 6s;
+}
+
+.floating-item:nth-child(5) {
+  left: 20%;
+  animation-duration: 16s;
+  animation-delay: 8s;
+  font-size: 1.8em; /* Varia o tamanho um pouco */
+}
+
+.floating-item:nth-child(6) {
+  left: 40%;
+  animation-duration: 13s;
+  animation-delay: 10s;
+  font-size: 2.2em;
+}
+
+.floating-item:nth-child(7) {
+  left: 60%;
+  animation-duration: 19s;
+  animation-delay: 12s;
+}
+
+.floating-item:nth-child(8) {
+  left: 80%;
+  animation-duration: 15s;
+  animation-delay: 14s;
+  font-size: 1.9em;
+}
+
+/* Se quiser cores diferentes para os corações */
+.floating-item.heart {
+  color: #ff69b4; /* Rosa */
+}
+
+/* Se quiser cores diferentes para os girassóis */
+.floating-item.flower {
+  color: #ffdd00; /* Amarelo (ou a cor padrão do emoji) */
+}

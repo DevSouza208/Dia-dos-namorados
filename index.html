@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Dia dos Namorados 💙</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="floating-elements-container">
+      <div class="floating-item heart">💙</div>
+      <div class="floating-item flower">🌻</div>
+      <div class="floating-item heart">💙</div>
+      <div class="floating-item flower">🌻</div>
+      <div class="floating-item heart">💙</div>
+      <div class="floating-item flower">🌻</div>
+      <div class="floating-item heart">💙</div>
+      <div class="floating-item flower">🌻</div>
+    </div>
+    <!-- TELA 1: Botão de Play -->
+    <section id="tela-play" class="tela ativa">
+      <button id="botao-play">🎁<br /><span>Abrir</span></button>
+    </section>
+
+    <!-- TELA 2: Foto com Mensagem -->
+    <section id="tela-mensagem" class="tela">
+      <img src="image.png" alt="Nós dois 💙" class="foto" />
+      <p class="mensagem">Você é o meu lugar favorito no mundo inteiro 💌</p>
+      <button class="btn-proximo">Próximo 💙</button>
+    </section>
+
+    <!-- TELA 3: Música -->
+    <section id="tela-musica" class="tela">
+      <p class="mensagem">Essa canção é pra você 🎶</p>
+      <audio id="player-musica" controls>
+        <source src="0612.MP3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+      </audio>
+
+      <!-- Legenda dinâmica -->
+      <div id="legenda" class="mensagem" style="min-height: 3em"></div>
+
+      <button class="btn-proximo">Próximo 💙</button>
+    </section>
+
+    <!-- TELA 4: Cronômetro -->
+    <section id="tela-cronometro" class="tela">
+      <h2>Nosso grande dia chega em:</h2>
+      <div id="contador"></div>
+      <p class="mensagem">
+        E eu mal posso esperar pra te chamar de "minha esposa" 💍
+      </p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
