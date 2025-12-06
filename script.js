@@ -23,8 +23,8 @@ function proximaTela() {
 }
 
 // CRONÔMETRO
-// A data de destino para o cronômetro é 12 de junho de 2025 às 20:00:00.
-const destino = new Date("2026-12-26T20:00:00");
+// A data de destino para o cronômetro é 26/12/26 às 08:00:00.
+const destino = new Date("2026-12-26T08:00:00");
 const contador = document.getElementById("contador");
 
 function atualizarContador() {
